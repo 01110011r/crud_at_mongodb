@@ -1,0 +1,25 @@
+type Query{
+    users:[User]
+    user(_id:String):User
+}
+
+
+type Mutation{
+createUser(username:String, email:String):Res
+updateUser(_id:String, username:String, email:String):Res
+deleteUser(_id:String):Res
+}
+
+
+type User{
+    _id:ID
+    username:String
+    email:String
+}
+
+type Res{
+    msg:String
+    data:Any
+}
+
+scalar Any
